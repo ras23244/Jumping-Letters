@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: aqua;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: inline-block;
+}
+span {
+    line-height: 1;
+    font-size: 80px;
+    color: blue;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+span:active {
+    animation-name: jump;
+    animation-duration: 1s; /* Increase duration for a slower effect */
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0, 0);
+    }
+    
+    30% {
+        transform: translate(0, -300px) rotate(180deg) scale(2.3); /* Move up */
+    }
+
+    70% {
+        transform: translate(0, 50px); /* Move down */
+    }
+
+    100% {
+        transform: translate(0, 0); /* Return to original position */
+    }
+}
